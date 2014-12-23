@@ -7,6 +7,7 @@ class MinStack:
     # @return an integer
     def push(self, x):
         self.stack.append(x)
+        # additional logic
         if len(self.minstack) == 0 or x <= self.minstack[-1]:
             self.minstack.append(x)
 
@@ -14,6 +15,7 @@ class MinStack:
     def pop(self):
         top = self.stack[-1]
         self.stack.pop()
+        # additional logic
         if top == self.minstack[-1]:
             self.minstack.pop()
 
